@@ -10,8 +10,12 @@
   ],
   "compilerOptions": {
     "baseUrl": ".",
+    "allowJs": true,
+    "checkJs": true,
+    "moduleResolution": "Node",
     "paths": {
       "@/*": ["./src/*"]
     }
-  }
+  },
+  
 }

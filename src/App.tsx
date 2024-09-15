@@ -2,7 +2,7 @@ import { useState } from 'react'
 import {BrowserRouter, Route, Routes} from "react-router-dom"
 import './App.css'
 import  Home  from "./pages/home/Home"
-import CreateGroup from './pages/createGroup/createGroup'
+import CreateGroup from './pages/creatingGroup/creatingGroup'
 import Contribute from './pages/contribute/contribute'
 import GroupDetails from './pages/groupDetails/groupDetails'
 import UserDashboard from './pages/dashboard/dashboard'

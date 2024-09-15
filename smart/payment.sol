@@ -47,7 +47,8 @@ contract Payment{
         */
         
         GroupStruct storage existingGroup = Groups[_groupID];
-        require(msg.value == (existingGroup.totalAmount)/(existingGroup.participants.length),"You should pay more");
+        uint toBePaid = (existingGroup.totalAmount)/(existingGroup.participants.length);
+        require(msg.value == toBePaid,"You should pay more");
         address payTo = existingGroup.payer;
         payable(payTo).transfer(msg.value);
         //user1.balance = user1.balance-msg.value;
@@ -102,7 +103,7 @@ contract Payment{
         return existingGroup.paidGuys;
     }
 
-    function whoDidntPay(uint _groupID) public view returns (address [] memory){
+    function whoDidntPay(uint _groupID) public view returns (address[] memory){
         GroupStruct storage existingGroup = Groups[_groupID];
         return existingGroup.unpaidGuys;
     }

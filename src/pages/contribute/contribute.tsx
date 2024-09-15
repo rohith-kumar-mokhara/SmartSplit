@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Container, Typography, TextField, Button, Box, Paper, Alert } from '@mui/material';
+import { DoPayment } from '../../../smart/interact.ts';
+import { DoPaymentEvent } from '../../../smart/interact.ts';
 
 const Contribute = () => {
-  const [groupId, setGroupId] = useState('');
+  const [groupId, setGroupId] = useState(0);
   const [amount, setAmount] = useState('');
   const [status, setStatus] = useState('');
 
@@ -18,11 +20,20 @@ const Contribute = () => {
     // Example submission logic
     console.log('Making Contribution:', { groupId, amount });
     // Here, you would handle smart contract interaction or payment processing
+    DoPayment(groupId)
+      .then(() => {
+        setStatus('Group created successfully!');
+        DoPaymentEvent();
+        // Reset form fields after successful submission
+        setGroupId(0);
 
+      })
+      .catch(error => {
+        console.log(`Error: ${error.message}`);
+        setStatus(`Error: ${error.message}`);
+      });
     setStatus('Contribution made successfully!');
     // Reset form fields after submission
-    setGroupId('');
-    setAmount('');
   };
 
   return (
@@ -38,7 +49,7 @@ const Contribute = () => {
               label="Group ID"
               variant="outlined"
               value={groupId}
-              onChange={(e) => setGroupId(e.target.value)}
+              onChange={(e) => setGroupId(parseInt(e.target.value))}
               required
             />
           </Box>
