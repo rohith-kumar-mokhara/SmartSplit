@@ -4,5 +4,8 @@
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "hardhat": "^2.22.10"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "web3": "^4.12.1"
+  }
 }
