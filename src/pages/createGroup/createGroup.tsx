@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Typography, TextField, Button, Box, Paper, Alert } from '@mui/material';
 
+
 const CreateGroup = () => {
   const [participants, setParticipants] = useState('');
   const [totalAmount, setTotalAmount] = useState('');
@@ -14,7 +15,6 @@ const CreateGroup = () => {
       setStatus('Please fill out all fields.');
       return;
     }
-
     // Example submission logic
     console.log('Creating Group:', { participants, totalAmount });
     // Here, you would handle smart contract deployment and state management
