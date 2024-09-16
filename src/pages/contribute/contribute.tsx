@@ -143,7 +143,7 @@ const Contribute = () => {
   return (
     <>
       <Navbar />
-      <Container maxWidth="none" sx={{ padding: 4, margin: 0, backgroundColor: '#393E46', minHeight: '100vh', color: '#EEEEEE' }}>
+      <Container maxWidth= "none"  sx={{ padding: 4, margin: 0, backgroundColor: '#393E46', minHeight: '100vh', color: '#EEEEEE' }}>
         <Typography variant="h4" component="h1" gutterBottom sx={{ color: '#00ADB5', fontWeight: 'bold', textAlign: 'center' }}>
           Contribute to a Group
         </Typography>

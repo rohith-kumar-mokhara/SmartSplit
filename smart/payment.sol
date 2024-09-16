@@ -107,6 +107,14 @@ contract Payment{
         GroupStruct storage existingGroup = Groups[_groupID];
         return existingGroup.unpaidGuys;
     }
+
+    
+    function paidAmount(uint _groupID) public view returns(uint){
+        GroupStruct storage existingGroup = Groups[_groupID];
+        uint payment= existingGroup.totalAmount/existingGroup.participants.length;
+        return payment;
+    }
+
     /*function getADDRESS() public view returns (address[] memory){
         return addressGroup;
     }
