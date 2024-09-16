@@ -1,5 +1,7 @@
 # SmartSplit
 
+Access it here: https://smart-split-uoax.vercel.app/
+
 ## Project Overview
 
 **SmartSplit** is a decentralized application (dApp) designed to simplify the process of splitting bills and managing payments on the Ethereum blockchain. By leveraging smart contracts, SmartSplit allows users to efficiently split a bill among multiple participants and automate payments, ensuring a transparent and seamless experience.
@@ -58,4 +60,5 @@ Open new terminal and
 - **Rohith**: Has written code for the frontend .
 - **Sudheer**: Has debugged all the frontend code
 - **Eswar**: Made sure the UI looks attractive
+
 
