@@ -1,6 +1,5 @@
 import { EventLog, Web3 } from "web3";
 //import path from "path";
-import fs from "fs";
 
 const web3 = new Web3("http://127.0.0.1:8545/");
 
@@ -10,14 +9,13 @@ const web3 = new Web3("http://127.0.0.1:8545/");
 const deployedAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3"; // Replace with your contract address
 // Create a new contract object using the ABI and address
 import abi from "./MyContractAbi.json";
-import { error } from "console";
 const myContract = new web3.eth.Contract(abi, deployedAddress);
 myContract.handleRevert = true;
 
 
 
 async function interact() {
-  const accounts = await web3.eth.getAccounts();
+  // const accounts = await web3.eth.getAccounts();
   //const defaultAccount = accounts[0];
 
   try {

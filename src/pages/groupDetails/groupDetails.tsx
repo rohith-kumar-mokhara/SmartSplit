@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Container, Typography, Box, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Alert, CircularProgress } from '@mui/material';
 import { whoDidntPay, whoPaid } from '../../../smart/interact';
 
@@ -20,7 +20,7 @@ const GroupDetails = () => {
   });
   const [status, setStatus] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(true); // New state for loading
-  const [groupId, setGroupId] = useState<number>(1); // Example groupId, can be set dynamically
+  const [groupId] = useState<number>(1); // Example groupId, can be set dynamically
 
   useEffect(() => {
     // Fetch group details from the smart contract

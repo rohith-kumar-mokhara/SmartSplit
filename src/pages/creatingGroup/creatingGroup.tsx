@@ -28,7 +28,7 @@ const slideIn = keyframes`
 `;
 
 // Styled components
-const AnimatedPaper = styled(Paper)(({ theme }) => ({
+const AnimatedPaper = styled(Paper)(({  }) => ({
   padding: '24px',
   borderRadius: '8px',
   boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
@@ -40,11 +40,11 @@ const AnimatedPaper = styled(Paper)(({ theme }) => ({
   margin: '0 auto', // Center the Paper horizontally
 }));
 
-const AnimatedButton = styled(Button)(({ theme }) => ({
+const AnimatedButton = styled(Button)(({ }) => ({
   animation: `${fadeIn} 1s ease-in`,
 }));
 
-const StyledTextField = styled(TextField)(({ theme }) => ({
+const StyledTextField = styled(TextField)(({ }) => ({
   backgroundColor: '#393E46',
   color: '#EEEEEE',
   '& .MuiInputLabel-root': {
@@ -106,7 +106,7 @@ const CreatingGroup = () => {
   return (
     <>
     <Navbar />
-    <Container maxWidth = "none" sx={{ padding: 0, margin: 0, width: '100%', backgroundColor: '#393E46', minHeight: '100vh', color: '#EEEEEE' }}>
+    <Container maxWidth = {false} sx={{ padding: 0, margin: 0, width: '100%', backgroundColor: '#393E46', minHeight: '100vh', color: '#EEEEEE' }}>
       <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', padding: 4 }}>
         <Box sx={{ width: '100%', maxWidth: '800px' }}>
           <Typography variant="h4" component="h1" gutterBottom sx={{ color: '#00ADB5', fontWeight: 'bold', textAlign: 'center' }}>
