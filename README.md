@@ -1,50 +1,61 @@
-# React + TypeScript + Vite
+# SmartSplit
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+**SmartSplit** is a decentralized application (dApp) designed to simplify the process of splitting bills and managing payments on the Ethereum blockchain. By leveraging smart contracts, SmartSplit allows users to efficiently split a bill among multiple participants and automate payments, ensuring a transparent and seamless experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Key Features:
+- **Automated Payments**: Once a bill is split, payments are automatically distributed to the designated recipients based on the split configuration.
+- **Group Management**: Create and manage groups of participants, specifying the payer and the total amount to be split.
+- **Payment Tracking**: Keep track of who has paid and who still owes, with automatic updates when payments are made.
+- **Blockchain Security**: All transactions are secured and recorded on the Ethereum blockchain, ensuring transparency and reliability.
 
-## Expanding the ESLint configuration
+## Tech Stacks
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+**SmartSplit** utilizes the following technologies:
 
-- Configure the top-level `parserOptions` property like this:
+- **React**: A JavaScript library for building user interfaces. React is used for the front-end of the application, providing a dynamic and responsive user experience.
+- **Solidity**: A programming language for writing smart contracts on the Ethereum blockchain. Solidity is used to create the smart contracts that handle the logic for splitting bills and processing payments.
+- **Hardhat**: A development environment and framework for Ethereum software. Hardhat is used for testing, deploying, and managing the Ethereum smart contracts in the SmartSplit project.
+- **JavaScript**: A versatile programming language used for integrating the front-end React application with the Ethereum blockchain through the use of web3.js or ethers.js libraries.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Getting Started
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/rohith-kumar-mokhara/SmartSplit.git
+   ```
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
+3. **Install Dependencies**:
+   ```bash
+   cd smart
+   npm install
+   ```
+4. **Compilation**
+   ```bash
+   node compile.cjs
+   npm i web3 solc hardhat
+   ```
+5. **Hardhat**
+  ```bash
+   npx hardhat init
+   npx hardhat node
+  ```
+Open new terminal and
+6. ***Run These***
+```bash
+   cd smart
+   node index.cjs
+   node deploy.cjs
+  ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Contribution by Team Members:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **K Vijay Karthick**: Has written code for smart contracts and using web3 to integrate into the project and integrating all the smart contract functions from interact.ts in to the frontend
+- **Rohith**: Has written code for the frontend .
+- **Sudheer**: Has debugged all the frontend code
+- **Eswar**: Made sure the UI looks attractive
+
