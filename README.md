@@ -52,4 +52,10 @@ Open new terminal and
    node deploy.cjs
   ```
 
+## Contribution by Team Members:
+
+- ** K Vijay Karthick **: Has written code for smart contracts and using web3 to integrate into the project and integrating all the smart contract functions from interact.ts in to the frontend
+- ** Rohith **: Has written code for the frontend from scratch
+- ** Sudheer **: Has debugged all the frontend code
+- ** Eswar **: Made sure the UI looks attractive
 
